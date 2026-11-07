@@ -1,0 +1,24 @@
+Audience card photography — downloaded 2026-10-30
+
+audience-cse.jpg
+The Jopwell Collection — Unsplash
+https://unsplash.com/photos/PhOMoF_Je1E
+https://images.unsplash.com/photo-1653669486779-671f54d26c13
+
+audience-representants.jpg
+Andreea Avramescu — Unsplash
+https://unsplash.com/photos/wR56AUlEsE4
+https://images.unsplash.com/photo-1630487656049-6db93a53a7e9
+
+audience-equipe.jpg
+Creatopy — Unsplash
+https://unsplash.com/photos/h43DFZjMcDw
+https://images.unsplash.com/photo-1702047109910-43af92894dc1
+
+All three source pages identify these photos as free under the Unsplash License:
+https://unsplash.com/license
+Photos illustrate collective work; the people shown are not presented as Uniion customers or endorsers.
+Local 900 px JPEG renditions; rectangular crops are applied in CSS only.
+
+Interaction reference (independent vanilla JS/CSS implementation):
+https://bencho.dev/?c=card-swap&theme=dark

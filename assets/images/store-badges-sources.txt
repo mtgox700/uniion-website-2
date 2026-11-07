@@ -1,0 +1,10 @@
+Official store badge artwork, fetched 2026-10-30.
+
+Apple App Store (French, black SVG):
+https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-fr
+Guidelines: https://developer.apple.com/app-store/marketing/guidelines/
+
+Google Play (French, official PNG):
+https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png
+
+Original artwork retained without modification. Apple and Google retain their respective trademarks. These are presentation assets; the card links to the existing Uniion mobile overview, not an invented store listing.

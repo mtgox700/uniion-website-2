@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="89" height="57" viewBox="0 0 89 57" fill="none">
+  <!-- Vector reconstruction fitted to the original PNG's multiple-line rings.
+       The small raster source is retained in assets/brand/source/uniion-logo.png. -->
+  <g stroke="#fff" stroke-width="0.7">
+    <ellipse cx="26.69" cy="26.94" rx="25.94" ry="24.12" transform="rotate(27.6 26.69 26.94)"/>
+    <ellipse cx="24.62" cy="28.25" rx="22.83" ry="25.5" transform="rotate(18.6 24.62 28.25)"/>
+    <ellipse cx="27" cy="28.69" rx="22.02" ry="25.12" transform="rotate(4.04 27 28.69)"/>
+    <ellipse cx="59.37" cy="27.25" rx="25.13" ry="24.19" transform="rotate(-33.36 59.37 27.25)"/>
+    <ellipse cx="56.56" cy="28.12" rx="23.83" ry="25.75" transform="rotate(7.96 56.56 28.12)"/>
+    <ellipse cx="59.94" cy="28.62" rx="21.89" ry="24.93" transform="rotate(-7.56 59.94 28.62)"/>
+  </g>
+</svg>
