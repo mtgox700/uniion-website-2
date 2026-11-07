@@ -1,0 +1,1 @@
+Communication, projets et defense : formes Phosphor Duotone, licence MIT dans ../../vendor/phosphor/LICENSE. Traitement orange Uniion. Bouclier : dessin SVG Uniion. Les fichiers sont autonomes ; en intégration inline, donner des identifiants de dégradé uniques à chaque copie.

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="security-shield" viewBox="0 0 96 112" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="security-shell" x1="0" y1="0" x2="0.75" y2="1"><stop stop-color="#ffc096"/><stop offset="0.4" stop-color="#ff7749"/><stop offset="1" stop-color="#ff541b"/></linearGradient>
+<linearGradient id="security-core" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff9b65"/><stop offset="0.5" stop-color="#ff641f"/><stop offset="1" stop-color="#df4512"/></linearGradient>
+</defs>
+<path d="M48 5C61 13 72 17 85 20a5 5 0 0 1 4 5v25c0 26-14 44-38 56a7 7 0 0 1-6 0C21 94 7 76 7 50V25a5 5 0 0 1 4-5C24 17 35 13 48 5Z" fill="url(#security-shell)"/>
+<path d="M48 15c11 6 22 10 31 12v23c0 21-10 36-31 48C27 86 17 71 17 50V27c9-2 20-6 31-12Z" fill="url(#security-core)" stroke="#ffe1c4" stroke-opacity="0.5" stroke-width="1"/>
+<path d="M31 54l12 12 23-25" fill="none" stroke="#fff9f2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,17 @@
+UNIION — ICÔNES ET SYMBOLES
+
+Le motif vient directement de uniion-logo.png (300 × 68 px).
+Les cercles à plusieurs traits sont conservés, sans les redessiner.
+
+icons/ : 9 variantes en SVG autonome, PNG 512 px et PNG 1024 px, coins arrondis.
+store/ : variantes carrées en SVG et PNG 1024 px, fond opaque, pour masque d’app appliqué par la plateforme.
+marks/ : symbole seul, fond transparent, en original, noir, blanc et orange.
+
+L’orange de marque est #ff541b ; le dégradé principal va de #ff7749 à #ff541b.
+Noir et blanc sont également disponibles comme symboles seuls transparents.
+
+Les SVG embarquent le PNG original : ce ne sont pas des tracés vectoriels natifs.
+Les exports 1024 px n’ajoutent pas de détail au symbole source de 89 × 57 px.
+Un original SVG/AI/PDF permettra de remplacer cette source sans changer la gamme.
+
+Régénération des SVG : python scripts/generate-brand-icons.py

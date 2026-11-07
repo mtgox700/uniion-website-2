@@ -1,0 +1,81 @@
+{
+  "source": "source/uniion-logo.png",
+  "source_sha256": "88a861b5d5aace4ddbcfd818fb65389e6a0ba14e1491b9b9951d2c85d189bb5c",
+  "source_size": [
+    300,
+    68
+  ],
+  "symbol_crop": [
+    0,
+    11,
+    89,
+    57
+  ],
+  "method": "Original PNG embedded unchanged; SVG clipping and alpha masks preserve its exact multiple-line rings.",
+  "note": "SVG containers embed raster source, not newly drawn vector paths. Large PNG exports do not add source detail.",
+  "variants": [
+    {
+      "name": "orange",
+      "label": "Orange Uniion",
+      "top": "#ff7749",
+      "bottom": "#ff541b",
+      "ink": "#ffffff"
+    },
+    {
+      "name": "orange-flat",
+      "label": "Orange uni",
+      "top": "#ff541b",
+      "bottom": "#ff541b",
+      "ink": "#ffffff"
+    },
+    {
+      "name": "ivory",
+      "label": "Ivoire",
+      "top": "#fff7ee",
+      "bottom": "#ffead9",
+      "ink": "#ff541b"
+    },
+    {
+      "name": "black",
+      "label": "Noir",
+      "top": "#111111",
+      "bottom": "#111111",
+      "ink": "#ffffff"
+    },
+    {
+      "name": "white",
+      "label": "Blanc",
+      "top": "#ffffff",
+      "bottom": "#ffffff",
+      "ink": "#111111"
+    },
+    {
+      "name": "original",
+      "label": "Couleurs originales",
+      "top": "#ffffff",
+      "bottom": "#ffffff",
+      "ink": null
+    },
+    {
+      "name": "blue",
+      "label": "Bleu",
+      "top": "#7d98ee",
+      "bottom": "#4868c5",
+      "ink": "#ffffff"
+    },
+    {
+      "name": "lavender",
+      "label": "Lavande",
+      "top": "#f1edff",
+      "bottom": "#e2dbfa",
+      "ink": "#65539f"
+    },
+    {
+      "name": "sunset",
+      "label": "Crépuscule",
+      "top": "#ffb58e",
+      "bottom": "#879fe0",
+      "ink": "#ffffff"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="40" viewBox="0 0 54 40" fill="none">
+  <title>Documents PDF et Word</title>
+  <g transform="translate(25 1) rotate(8 13 16)">
+    <path d="M3 0h15l8 8v22a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2Z" fill="#E6EEFF"/>
+    <path d="M18 0v8h8" fill="#AFC5F0"/>
+    <path d="M16 15h6m-6 4h6m-6 4h6" stroke="#5F83C8" stroke-width="1.3" stroke-linecap="round"/>
+    <rect x="-2" y="10" width="17" height="17" rx="2.5" fill="#2862BD"/>
+    <path d="m1.8 14 1.8 9 2.4-6.5L8.4 23l1.8-9" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(1 7)">
+    <path d="M3 0h18l8 8v22a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2Z" fill="#FFF4EF"/>
+    <path d="M21 0v8h8" fill="#FFC6B3"/>
+    <rect x="-1" y="13" width="29" height="14" rx="2.5" fill="#FF541B"/>
+    <text x="13.5" y="23" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="700" font-size="9">PDF</text>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="phosphor-icon feature-material" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="projets-body" x1="0" y1="0" x2="0.8" y2="1"><stop stop-color="#ffba89"/><stop offset="0.45" stop-color="#ff8b56"/><stop offset="1" stop-color="#ff541b"/></linearGradient>
+<linearGradient id="projets-edge" x1="0" y1="0" x2="0.6" y2="1"><stop stop-color="#ff874e"/><stop offset="0.55" stop-color="#ff541b"/><stop offset="1" stop-color="#df4512"/></linearGradient>
+</defs>
+<path d="M216,56v64H160V56ZM40,208a8,8,0,0,0,8,8H88a8,8,0,0,0,8-8V120H40Z" fill="url(#projets-body)"/>
+<path d="M216,48H40a8,8,0,0,0-8,8V208a16,16,0,0,0,16,16H88a16,16,0,0,0,16-16V160h48v16a16,16,0,0,0,16,16h40a16,16,0,0,0,16-16V56A8,8,0,0,0,216,48Zm-8,64H168V64h40ZM88,64v48H48V64Zm0,144H48V128H88Zm16-64V64h48v80Zm64,32V128h40v48Z" fill="url(#projets-edge)"/>
+</svg>
