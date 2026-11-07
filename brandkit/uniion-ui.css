@@ -1,0 +1,19 @@
+/* Shared Uniion styles: keep these imports relative to /brandkit/. */
+@import url("../assets/home.css");
+@import url("../assets/home-tour.css");
+@import url("../assets/hero-screen.css");
+@import url("../assets/security.css");
+@import url("../assets/sunset.css");
+
+/* Small page scaffold; components above stay identical to the landing. */
+.uniion-page-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 28px; }
+.uniion-page-header img { width: 150px; height: auto; }
+.uniion-section { padding-block: clamp(48px, 8vw, 100px); }
+.uniion-title { font: 400 clamp(36px, 5vw, 64px)/1.1 Lora, Georgia, serif; letter-spacing: -.04em; text-wrap: balance; }
+.uniion-title em { color: var(--orange); font-weight: inherit; }
+.uniion-copy { max-width: 58ch; margin-top: 24px; color: var(--muted); font-size: 17px; line-height: 1.75; }
+.uniion-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.uniion-panel { padding: clamp(24px, 4vw, 44px); border: 1px solid var(--line); border-radius: 20px; background: white; }
+.uniion-panel h2 { font: 400 clamp(28px, 3vw, 40px)/1.2 Lora, Georgia, serif; letter-spacing: -.035em; }
+.uniion-panel p { margin-top: 16px; max-width: 62ch; line-height: 1.75; color: var(--muted); }
+@media(max-width:600px) { .uniion-page-header { flex-wrap: wrap; } }

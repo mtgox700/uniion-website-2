@@ -1,0 +1,30 @@
+<section class="kit-section" id="defilement">
+  <h2>Un défilement qui accompagne.</h2>
+  <p>Le réglage Uniion : une inertie légère à la molette et au trackpad, un retour en haut continu, puis une arrivée douce. Sur téléphone, le geste vertical reste natif.</p>
+  <div class="kit-scroll-settings">
+    <div class="kit-scroll-controls">
+      <label for="scroll-lerp">Réactivité <output for="scroll-lerp"></output></label>
+      <input id="scroll-lerp" data-scroll-setting="lerp" type="range" min="0.08" max="0.18" step="0.01" aria-describedby="lerp-help">
+      <p id="lerp-help">Plus bas : plus souple. Plus haut : plus direct. Gardez une sensation proche du geste.</p>
+      <label for="scroll-anchor">Navigation entre sections <output for="scroll-anchor"></output></label>
+      <input id="scroll-anchor" data-scroll-setting="anchorDuration" type="range" min="0.7" max="1.6" step="0.05">
+      <label for="scroll-top">Retour en haut <output for="scroll-top"></output></label>
+      <input id="scroll-top" data-scroll-setting="topDuration" type="range" min="1.2" max="2.4" step="0.1">
+      <div class="kit-links"><a href="#top">Tester le retour en haut ↑</a><button type="button" data-scroll-reset>Rétablir Uniion</button></div>
+      <p class="kit-small">Les changements s’appliquent à cette page de démonstration seulement. Copiez le code pour les utiliser ailleurs.</p>
+      <p class="kit-reduced-note">Le mouvement réduit est activé sur votre appareil : le défilement reste instantané.</p>
+    </div>
+    <div class="kit-scroll-guide">
+      <h3>Le bon équilibre</h3>
+      <p>La molette garde sa vitesse habituelle. Les liens utilisent une accélération et un ralentissement progressifs, sans rebond.</p>
+      <p>Un nouveau geste reprend la main. Les liens au clavier restent immédiats et déplacent le focus vers leur destination.</p>
+      <p>Les préférences de mouvement réduit sont respectées. Sans JavaScript, les liens restent des ancres natives.</p>
+      <a href="https://github.com/darkroomengineering/lenis" target="_blank" rel="noopener">Lenis 1.3.27 · documentation ↗</a>
+    </div>
+  </div>
+  <div class="kit-code"><div class="kit-code-head"><span>Installation · page à la racine de site/</span><button type="button" data-copy="scroll-code">Copier le code</button></div><pre><code id="scroll-code">&lt;link rel="stylesheet" href="assets/smooth-scroll.css"&gt;
+&lt;script src="assets/vendor/lenis-1.3.27.min.js" defer&gt;&lt;/script&gt;
+&lt;script src="assets/scroll-config.js" defer&gt;&lt;/script&gt;
+&lt;script src="assets/smooth-scroll.js" defer&gt;&lt;/script&gt;</code></pre></div>
+  <p class="kit-small" style="margin-top:20px">Placez <code>id="top"</code> sur le body et <code>href="#top"</code> sur le logo. Les ancres existantes gardent leur <code>scroll-margin-top</code>. N’ajoutez pas un second moteur de scroll.</p>
+</section>
