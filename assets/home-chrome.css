@@ -1,0 +1,297 @@
+/* Bare controls in the hero; a slim floating pill emerges on scroll. */
+:root {
+  --footer-background: linear-gradient(180deg, #202b55 0%, #415a91 100%);
+}
+.site-header {
+  position: sticky;
+  top: 20px;
+  z-index: 30;
+  height: 54px;
+  margin-block: 24px 34px;
+  padding: 0;
+  isolation: isolate;
+  background: transparent;
+  pointer-events: none;
+}
+.site-header > .brand,
+.site-header > .button {
+  pointer-events: auto;
+}
+.header-surface {
+  position: absolute;
+  inset: 1px 0;
+  z-index: -1;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 3px 12px #2522390a;
+  opacity: 0;
+  pointer-events: none;
+  transition: background-color 400ms ease, border-color 400ms ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .header-surface { transition: none; }
+}
+.site-header .button {
+  border-radius: 999px;
+}
+.site-header.is-over-dark .header-surface {
+  background: #202b55;
+  border-color: #ffffff24;
+  box-shadow: 0 5px 20px #0c102b24;
+}
+.site-header.is-over-dark .brand img {
+  filter: brightness(0) invert(1);
+}
+.site-header .brand img {
+  width: 128px;
+  transition: filter 300ms ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header .brand img { transition: none; }
+}
+.skip-link {
+  z-index: 40;
+}
+/* Fade continuously toward the screen edge, without an opaque band. */
+.viewport-fade {
+  position: fixed;
+  inset: 0;
+  z-index: 25;
+  overflow: hidden;
+  pointer-events: none;
+  background: #fff;
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0,
+    transparent 144px,
+    transparent calc(100% - 40px),
+    #0007 calc(100% - 12px),
+    #000e 100%
+  );
+}
+.viewport-fade::before,
+.viewport-fade::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+}
+.viewport-fade::before {
+  height: var(--security-height, 0px);
+  transform: translateY(var(--security-y, 100vh));
+  background: var(--security-background);
+}
+.viewport-fade::after {
+  /* Extend the final blue past fractional page bounds; never expose the white base. */
+  height: max(calc(var(--footer-height, 0px) + 2px), 100vh);
+  transform: translateY(var(--footer-y, 100vh));
+  background: var(--footer-background) 0 0 / 100% var(--footer-height, 0px)
+    no-repeat #415a91;
+}
+body:has(:focus-visible) .viewport-fade {
+  visibility: hidden;
+}
+@media (max-width: 700px) {
+  .viewport-fade {
+    mask-image: linear-gradient(
+      to bottom,
+      #000 0,
+      transparent 112px,
+      transparent calc(100% - 28px),
+      #000d
+    );
+  }
+}
+@media print {
+  .viewport-fade {
+    display: none;
+  }
+}
+#securite,
+#humain,
+#mission {
+  scroll-margin-top: 108px;
+}
+.site-footer {
+  padding-top: 0;
+  background: var(--footer-background);
+  color: #f8f7fc;
+  border-top: 0;
+  overflow: clip;
+}
+.footer-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px 235px;
+  gap: 54px;
+  padding-block: 88px 72px;
+}
+.footer-identity {
+  grid-area: 1 / 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+.footer-wordmark img {
+  width: 190px;
+  filter: brightness(0) invert(1);
+}
+.footer-identity p {
+  border-left: 1px solid #ffffff30;
+  padding: 4px 0 4px 30px;
+  color: #cbd5ee;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-links[aria-label="Découvrir Uniion"] {
+  grid-area: 1 / 2;
+}
+.footer-links[aria-label="Contact et informations légales"] {
+  grid-area: 1 / 3;
+}
+.footer-links h2 {
+  font: 500 11px/1.4 "DM Sans", sans-serif;
+  color: #bbc9e8;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  padding-block: 7px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.footer-links svg {
+  width: 13px;
+  height: 13px;
+}
+.footer-signoff {
+  grid-area: 1 / 1;
+  align-self: end;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.footer-signoff p {
+  margin: 0;
+}
+.footer-signoff span {
+  color: #b4b9c9;
+}
+.footer-art {
+  position: relative;
+  height: clamp(270px, 30vw, 460px);
+  overflow: hidden;
+  color: #fff;
+}
+.footer-art img {
+  position: absolute;
+  width: min(1050px, 95vw);
+  height: auto;
+  left: 50%;
+  top: 12%;
+  transform: translateX(-50%);
+  opacity: 0.9;
+}
+.footer-ascii-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+.footer-art.is-ascii-ready > img { opacity: 0; }
+.footer-art.is-ascii-ready .footer-ascii-canvas { opacity: 0.9; }
+.footer-art[data-ascii-wake] {
+  touch-action: pan-y pinch-zoom;
+  user-select: none;
+  -webkit-user-select: none;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .footer-art.is-ascii-ready { cursor: crosshair; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer-art.is-ascii-ready > img { opacity: 0.9; }
+  .footer-art.is-ascii-ready .footer-ascii-canvas { opacity: 0; }
+}
+@media (max-width: 1100px) {
+  .footer-layout {
+    grid-template-columns: minmax(0, 1fr) 140px 210px;
+    gap: 36px;
+    padding-block: 70px 50px;
+  }
+  .footer-identity {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-identity,
+  .footer-links[aria-label] {
+    grid-area: auto;
+  }
+  .footer-signoff {
+    grid-area: auto;
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+  .footer-identity p {
+    border: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 700px) {
+  .site-header {
+    width: calc(100% - 40px);
+    height: 52px;
+    top: 12px;
+    margin-block: 16px 24px;
+    padding: 0;
+  }
+  .site-header .brand img {
+    width: 100px;
+  }
+  .site-header .button {
+    min-height: 44px;
+    font-size: 10px;
+    padding-inline: 10px;
+    letter-spacing: 0.35px;
+  }
+  .site-header .button svg {
+    display: none;
+  }
+  .footer-layout {
+    grid-template-columns: 1fr 1.3fr;
+    gap: 38px 24px;
+    padding-block: 54px 38px;
+  }
+  .footer-identity {
+    grid-column: 1 / -1;
+  }
+  .footer-wordmark img {
+    width: 170px;
+  }
+  .footer-links a {
+    min-height: 44px;
+    font-size: 12px;
+  }
+  .footer-art {
+    height: 245px;
+  }
+  .footer-art img {
+    top: 22%;
+    width: 580px;
+  }
+}

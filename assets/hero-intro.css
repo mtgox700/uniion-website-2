@@ -1,0 +1,266 @@
+/* The staged reveal belongs only to the hero; the tour owns its scroll transforms. */
+.hero-intro-pending
+  .product-scene
+  :is(
+    .ambient-light,
+    .briefing-card,
+    .floating-document,
+    .floating-note,
+    .hero-signature
+  ) {
+  opacity: 0;
+  visibility: hidden;
+}
+.hero-signature {
+  --signature-width: 280px;
+  --signature-height: 168px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  z-index: 4;
+  right: 16px;
+  bottom: -80px;
+  width: var(--signature-width);
+  height: var(--signature-height);
+  color: var(--hero-detail-ink);
+  pointer-events: none;
+}
+.signature-destination {
+  width: 112px;
+  height: 40px;
+  flex: none;
+  margin-left: auto;
+}
+.signature-surface {
+  pointer-events: auto;
+  position: relative;
+  width: var(--signature-width);
+  height: var(--signature-height);
+  border-radius: 14px;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  transition:
+    width 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    height 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+  background: var(--hero-detail-surface);
+  box-shadow:
+    0 14px 34px -16px #16131e70,
+    inset 0 0 0 1px #ffffff1c;
+}
+.signature-face {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--signature-width);
+  height: var(--signature-height);
+  translate: -50% -50%;
+  transition:
+    scale 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 420ms ease 220ms;
+}
+.signature-surface.is-signed {
+  width: 112px;
+  height: 40px;
+  border-radius: 20px;
+  transform: translate(
+    var(--signature-dock-x, 0px),
+    var(--signature-dock-y, 0px)
+  );
+}
+.is-signed .signature-face {
+  scale: 0.35;
+  opacity: 0;
+  transition:
+    scale 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 420ms ease 160ms;
+}
+.signature-pill {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: inherit;
+  font:
+    500 13px/1 "DM Sans",
+    sans-serif;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  animation: signature-said 320ms ease 420ms both;
+}
+.signature-pill[hidden] {
+  display: none;
+}
+.signature-check {
+  color: #a4d6b0;
+  animation: signature-check 420ms cubic-bezier(0.3, 1.6, 0.4, 1) 460ms both;
+}
+@keyframes signature-said {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes signature-check {
+  from {
+    opacity: 0;
+    scale: 0.3;
+    rotate: -20deg;
+  }
+}
+.signature-label {
+  position: absolute;
+  top: 13px;
+  left: 17px;
+  font-size: 11px;
+  color: var(--hero-detail-muted);
+}
+.signature-ink,
+.signature-pad {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.signature-ink {
+  pointer-events: none;
+  color: var(--hero-detail-ink);
+  transition: color 260ms ease;
+}
+.is-settled .signature-ink {
+  color: color-mix(in srgb, var(--hero-detail-ink) 30%, var(--hero-detail-surface));
+}
+.is-settled .signature-baseline {
+  opacity: 0.5;
+  transition: opacity 420ms ease;
+}
+.signature-pad {
+  border: 0;
+  padding: 0;
+  border-radius: inherit;
+  background: transparent;
+  cursor: crosshair;
+  touch-action: none;
+}
+.signature-pad:focus-visible,
+.signature-clear:focus-visible,
+.signature-pill:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+.signature-baseline {
+  position: absolute;
+  top: 73%;
+  left: 17px;
+  right: 17px;
+  height: 1px;
+  background: #ffffff26;
+  pointer-events: none;
+}
+.signature-hint {
+  position: absolute;
+  bottom: 13px;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+  color: var(--hero-detail-muted);
+  pointer-events: none;
+}
+.signature-clear {
+  position: absolute;
+  right: 4px;
+  top: 0;
+  min-width: 44px;
+  min-height: 36px;
+  padding: 8px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--hero-detail-muted);
+  font-size: 11px;
+}
+.signature-clear:hover,
+.signature-clear:active {
+  background: transparent;
+  color: var(--hero-detail-muted);
+  box-shadow: none;
+  transform: none;
+}
+.signature-surface.is-inked .signature-hint {
+  visibility: hidden;
+}
+/* Keep the complete writing surface visible on shorter laptop displays. */
+@media (min-width: 1101px) {
+  .hero-grid {
+    min-height: 0;
+    padding-top: 64px;
+  }
+}
+@media (min-width: 1101px) and (max-height: 900px) {
+  .hero-grid {
+    min-height: 0;
+    padding-block: clamp(24px, calc(100svh - 700px), 64px) 100px;
+  }
+  .hero-signature { bottom: -64px; }
+}
+@media (max-width: 1100px) {
+  .hero-grid {
+    padding-bottom: 170px;
+  }
+}
+@media (max-width: 599px) {
+  /* Leave a blank lower edge for the pad to overlap without covering the footer. */
+  .product-scene .briefing-card {
+    padding-bottom: 40px;
+  }
+  .hero-signature {
+    --signature-width: min(250px, calc(100vw - 48px));
+    --signature-height: calc(var(--signature-width) * 0.6);
+    right: 4px;
+    bottom: -118px;
+  }
+  .product-scene .briefing-review-label {
+    display: none;
+  }
+  .signature-label {
+    top: 10px;
+    left: 13px;
+  }
+  .signature-baseline {
+    left: 13px;
+    right: 13px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .signature-surface,
+  .signature-face,
+  .signature-ink,
+  .signature-baseline {
+    transition: none !important;
+  }
+  .signature-pill,
+  .signature-check {
+    animation: none;
+  }
+  .hero-intro-pending
+    .product-scene
+    :is(
+      .ambient-light,
+      .briefing-card,
+      .floating-document,
+      .floating-note,
+      .hero-signature
+    ) {
+    opacity: 1;
+    visibility: visible;
+  }
+}

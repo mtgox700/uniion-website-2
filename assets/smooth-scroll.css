@@ -1,0 +1,7 @@
+@import url("vendor/lenis-1.3.27.css");
+
+/* One scroll animator at a time. Native scrolling remains the fallback. */
+html.lenis { scroll-behavior: auto !important; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+}
